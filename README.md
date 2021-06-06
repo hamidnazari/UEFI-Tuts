@@ -1,3 +1,3 @@
-# Step by Step Tutorials on how to use thhe UEFI for OS Development
+# Step by Step Tutorials on how to use the UEFI for OS Development
 
 Coming soon...
