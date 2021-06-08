@@ -37,7 +37,7 @@ typedef uint_least16_t          CHAR16;
 typedef unsigned int        UINT32;
 typedef unsigned long long  UINT64;
 
-// UINTN is used for both 64-Bit and 32-Bit.
+// UINTN can be used for both 64-Bit and 32-Bit.
 // We set this for 64-Bit since this tutorial series is 64-Bit only.
 typedef unsigned long long      UINTN;
 
@@ -65,7 +65,7 @@ typedef EFI_STATUS (*EFI_TEXT_TEST_STRING)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCO
 typedef EFI_STATUS (*EFI_TEXT_QUERY_MODE)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, UINTN ModeNumber, UINTN *Columns, UINTN *Rows);
 typedef EFI_STATUS (*EFI_TEXT_SET_MODE)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, UINTN ModeNumber);
 
-// This is the function we use to set the collor attribute of the text.
+// This is the function we use to set the color attribute of the text.
 typedef EFI_STATUS (*EFI_TEXT_SET_ATTRIBUTE)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, UINTN Attribute);
 
 // The struct for the EFI Text Output protocols.
@@ -90,7 +90,8 @@ typedef struct EFI_TABLE_HEADER
 } EFI_TABLE_HEADER;
 
 // EFI has a system and runtime. This system table is the first struct
-// called from the main section.
+// called from the main section. Think of it as the entry point
+// to all of the EFI functions.
 typedef struct EFI_SYSTEM_TABLE
 {
     EFI_TABLE_HEADER                hrd;
