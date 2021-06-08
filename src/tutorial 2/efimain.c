@@ -41,7 +41,7 @@ typedef unsigned long long  UINT64;
 // We set this for 64-Bit since this tutorial series is 64-Bit only.
 typedef unsigned long long      UINTN;
 
-typedef unsigned char       BOOL;
+typedef unsigned char       BOOLEAN;
 
 typedef void                *EFI_HANDLE;
 typedef UINT64              EFI_STATUS;
@@ -54,7 +54,7 @@ typedef struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL {} EFI_SIMPLE_TEXT_INPUT_PROTOCOL;
 struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
 // This function resets the string output.
-typedef EFI_STATUS (*EFI_TEXT_RESET)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, BOOL ExtendedVerification);
+typedef EFI_STATUS (*EFI_TEXT_RESET)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, BOOLEAN ExtendedVerification);
 
 // This function prints the string output to the screen.
 typedef EFI_STATUS (*EFI_TEXT_STRING)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, CHAR16 *String);

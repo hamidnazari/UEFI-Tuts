@@ -11,7 +11,7 @@ typedef uint_least16_t          CHAR16;
 typedef unsigned int        UINT32;
 typedef unsigned long long  UINT64;
 
-typedef unsigned char       BOOL;
+typedef unsigned char       BOOLEAN;
 
 typedef void                *EFI_HANDLE;
 typedef UINT64              EFI_STATUS;
@@ -24,7 +24,7 @@ typedef struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL {} EFI_SIMPLE_TEXT_INPUT_PROTOCOL;
 struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
 // This function resets the string output.
-typedef EFI_STATUS (*EFI_TEXT_RESET)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, BOOL ExtendedVerification);
+typedef EFI_STATUS (*EFI_TEXT_RESET)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, BOOLEAN ExtendedVerification);
 
 // This function prints the string output to the screen.
 typedef EFI_STATUS (*EFI_TEXT_STRING)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, CHAR16 *String);
