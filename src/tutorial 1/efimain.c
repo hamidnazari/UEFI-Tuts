@@ -16,19 +16,27 @@ typedef unsigned char       BOOL;
 typedef void                *EFI_HANDLE;
 typedef UINT64              EFI_STATUS;
 
+// This struct is a placeholder and not usable at this time
+// The code will not compile without it though.
 typedef struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL {} EFI_SIMPLE_TEXT_INPUT_PROTOCOL;
 
+// We are forward declaring this struct so that the two function typedefs can operate.
 struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
+// This function resets the string output.
 typedef EFI_STATUS (*EFI_TEXT_RESET)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, BOOL ExtendedVerification);
+
+// This function prints the string output to the screen.
 typedef EFI_STATUS (*EFI_TEXT_STRING)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, CHAR16 *String);
 
+// The struct for the EFI Text Output protocols.
 typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
 {
     EFI_TEXT_RESET      Reset;
     EFI_TEXT_STRING     OutputString;
 } EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
+// This is the main EFI header for all of the EFI.
 typedef struct EFI_TABLE_HEADER
 {
     UINT64    Signature;
@@ -38,6 +46,8 @@ typedef struct EFI_TABLE_HEADER
     UINT32    Reserved;
 } EFI_TABLE_HEADER;
 
+// EFI has a system and runtime. This system table is the first struct
+// called from the main section.
 typedef struct EFI_SYSTEM_TABLE
 {
     EFI_TABLE_HEADER                hrd;
@@ -49,10 +59,20 @@ typedef struct EFI_SYSTEM_TABLE
     EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *ConOut;
 } EFI_SYSTEM_TABLE ;
 
+// This is like int main() in a typical C program.
+// In this case, we create an ImageHandle for the overall EFI interface,
+// as well as a System Table pointer to the EFI_SYSTEM_TABLE struct.
 EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable)
 {
+    // This clears the screen and buffer.
     SystemTable->ConOut->Reset(SystemTable->ConOut, 1);
+
+    // This prints "Testing..." to the screen ( A.K.A. ConOut is Console Out )
     SystemTable->ConOut->OutputString(SystemTable->ConOut, L"Testing...\r\n");
+
+    // We use this while loop to hang. At this point, simple shut off computer.
     while(1){};
-	return 0;
+
+    // The EFI needs to have a 0 ( or EFI_SUCCESS ) in order to know everything is ok.
+    return 0;
 }
