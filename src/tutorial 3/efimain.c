@@ -11,7 +11,7 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable)
     // This clears the screen and buffer.
     SystemTable->ConOut->Reset(SystemTable->ConOut, 1);
 
-    // Here is where we set the color Yellow for the text output.
+    // We set the color Light Green for the text output.
     SystemTable->ConOut->SetAttribute(SystemTable->ConOut, EFI_LIGHTGREEN);
 
     // This prints "Hit Any Key" to the screen ( A.K.A. ConOut is Console Out )
