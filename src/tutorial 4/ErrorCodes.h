@@ -1,5 +1,5 @@
-// UEFI Bootable Space Invaders Game - ThatOSDev ( 2021 )
-// https://github.com/ThatOSDev/UEFI-Space-Invaders
+// UEFI From Scratch Tutorials - ThatOSDev ( 2021 )
+// https://github.com/ThatOSDev/UEFI-Tuts
 
 #pragma once
 
