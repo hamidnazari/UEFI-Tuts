@@ -16,15 +16,16 @@ https://www.osforensics.com/tools/mount-disk-images.html
 
 I supplied the qemu bat file to launch qemu and load the drive.hdd file.  
 
-    - [TUTORIAL 1] TEXT  
-    - [TUTORIAL 2] COLOR  
-    - [TUTORIAL 3] KEYBOARD  
-    - [TUTORIAL 4] ERROR CHECKING  
-    - [TUTORIAL 5] EFI LIBS FILE 
-    - [TUTORIAL 6] CURSOR POSITIONS 
-    - [TUTORIAL 7] GRAPHICS OUTPUT PROTOCOL  
-    - [TUTORIAL 8] EFI STALL ( A.K.A. Delay )    
-    - [TUTORIAL 9] COLD REBOOT  
+    - [TUTORIAL  1] TEXT  
+    - [TUTORIAL  2] COLOR  
+    - [TUTORIAL  3] KEYBOARD  
+    - [TUTORIAL  4] ERROR CHECKING  
+    - [TUTORIAL  5] EFI LIBS FILE 
+    - [TUTORIAL  6] CURSOR POSITIONS 
+    - [TUTORIAL  7] GRAPHICS OUTPUT PROTOCOL  
+    - [TUTORIAL  8] EFI STALL ( A.K.A. Delay )    
+    - [TUTORIAL  9] COLD REBOOT  
+    - [TUTORIAL 10] UNICODE KeyStroke ( UnicodeChar )  
 
 More Tuts Coming soon...  
 
