@@ -20,7 +20,7 @@ I supplied the qemu bat file to launch qemu and load the drive.hdd file.
     - [TUTORIAL 2] COLOR  
     - [TUTORIAL 3] KEYBOARD  
     - [TUTORIAL 4] ERROR CHECKING  
-    - [TUTORIAL 5] LIBS FILE 
+    - [TUTORIAL 5] EFI LIBS FILE 
     - [TUTORIAL 6] CURSOR POSITIONS 
     - [TUTORIAL 7] GRAPHICS OUTPUT PROTOCOL   
 
