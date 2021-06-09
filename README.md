@@ -22,7 +22,8 @@ I supplied the qemu bat file to launch qemu and load the drive.hdd file.
     - [TUTORIAL 4] ERROR CHECKING  
     - [TUTORIAL 5] EFI LIBS FILE 
     - [TUTORIAL 6] CURSOR POSITIONS 
-    - [TUTORIAL 7] GRAPHICS OUTPUT PROTOCOL   
+    - [TUTORIAL 7] GRAPHICS OUTPUT PROTOCOL  
+    - [TUTORIAL 8] EFI STALL ( A.K.A. Delay )    
 
 More Tuts Coming soon...  
 
