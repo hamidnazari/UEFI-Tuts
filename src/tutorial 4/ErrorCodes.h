@@ -3,6 +3,8 @@
 
 #pragma once
 
+// UEFI 2.9 Specs PDF Page 2194 - 2196
+
 #define EFI_SUCCESS               0x0000000000000000
 #define EFI_ERROR                 0x8000000000000000 
 #define EFI_LOAD_ERROR            (EFI_ERROR | 0x0000000000000001)

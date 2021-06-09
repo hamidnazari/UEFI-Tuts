@@ -1,6 +1,7 @@
 // UEFI From Scratch Tutorials - ThatOSDev ( 2021 )
 // https://github.com/ThatOSDev/UEFI-Tuts
 
+// UEFI 2.9 Specs PDF Page 457
 #define EFI_BLACK                               0x00
 #define EFI_BLUE                                0x01
 #define EFI_GREEN                               0x02
