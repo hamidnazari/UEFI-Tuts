@@ -30,6 +30,7 @@
 // NOTE : CHAR16 is supposed to be Minimum of 16-Bit.
 //        But on some machines it will be 32-Bit.
 //        I included both typedefs as a means of reference.
+// UEFI 2.9 Specs PDF Page 20
 typedef unsigned short int  uint16_t;
 typedef unsigned short int  uint_least16_t;
 typedef uint_least16_t          CHAR16;
@@ -37,8 +38,9 @@ typedef uint_least16_t          CHAR16;
 typedef unsigned int        UINT32;
 typedef unsigned long long  UINT64;
 
-// UINTN can be used for both 64-Bit and 32-Bit.
+// UINTN can be used for both 64-Bit ( 8 Bytes ) and 32-Bit ( 4 Bytes ).
 // We set this for 64-Bit since this tutorial series is 64-Bit only.
+// UEFI 2.9 Specs PDF Page 20
 typedef unsigned long long      UINTN;
 
 typedef unsigned char       BOOLEAN;
@@ -69,6 +71,7 @@ typedef EFI_STATUS (*EFI_TEXT_SET_MODE)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *
 typedef EFI_STATUS (*EFI_TEXT_SET_ATTRIBUTE)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, UINTN Attribute);
 
 // The struct for the EFI Text Output protocols.
+// UEFI 2.9 Specs PDF Page 449
 typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
 {
     EFI_TEXT_RESET                         Reset;
@@ -80,6 +83,7 @@ typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
 } EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
 // This is the main EFI header for all of the EFI.
+// UEFI 2.9 Specs PDF Page 93
 typedef struct EFI_TABLE_HEADER
 {
     UINT64    Signature;
@@ -92,6 +96,7 @@ typedef struct EFI_TABLE_HEADER
 // EFI has a system and runtime. This system table is the first struct
 // called from the main section. Think of it as the entry point
 // to all of the EFI functions.
+// UEFI 2.9 Specs PDF Page 94
 typedef struct EFI_SYSTEM_TABLE
 {
     EFI_TABLE_HEADER                hrd;
@@ -106,6 +111,7 @@ typedef struct EFI_SYSTEM_TABLE
 // This is like int main() in a typical C program.
 // In this case, we create an ImageHandle for the overall EFI interface,
 // as well as a System Table pointer to the EFI_SYSTEM_TABLE struct.
+// UEFI 2.9 Specs PDF Page 91
 EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable)
 {
     // This clears the screen and buffer.
