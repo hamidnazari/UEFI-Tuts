@@ -3,7 +3,7 @@
 
 #include "efi.h"
 #include "ErrorCodes.h"
-#include "libs.h"
+#include "efilibs.h"
 
 // This is like int main() in a typical C program.
 // In this case, we create an ImageHandle for the overall EFI interface,

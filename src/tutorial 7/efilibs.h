@@ -1,8 +1,8 @@
 // UEFI From Scratch Tutorials - ThatOSDev ( 2021 )
 // https://github.com/ThatOSDev/UEFI-Tuts
 
-#ifndef LIBS_H
-#define LIBS_H
+#ifndef EFILIBS_H
+#define EFILIBS_H
 
              // ARGB             
 #define ORANGE 0xffffa500
@@ -86,4 +86,4 @@ void CreateFilledBox(UINT32 xPos, UINT32 yPos, UINT32 w, UINT32 h)
     gop->Blt(gop, &GraphicsColor, EfiBltVideoFill, 0, 0, xPos, yPos, w, h, 0);
 }
 
-#endif // LIBS_H
+#endif // EFILIBS_H

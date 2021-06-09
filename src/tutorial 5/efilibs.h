@@ -1,8 +1,8 @@
 // UEFI From Scratch Tutorials - ThatOSDev ( 2021 )
 // https://github.com/ThatOSDev/UEFI-Tuts
 
-#ifndef LIBS_H
-#define LIBS_H
+#ifndef EFILIBS_H
+#define EFILIBS_H
 
 EFI_SYSTEM_TABLE* SystemTable;
 
@@ -36,4 +36,4 @@ void HitAnyKey()
     while((SystemTable->ConIn->ReadKeyStroke(SystemTable->ConIn, &Key)) == EFI_NOT_READY);
 }
 
-#endif // LIBS_H
+#endif // EFILIBS_H
