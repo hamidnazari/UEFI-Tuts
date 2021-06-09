@@ -4,6 +4,7 @@
 // NOTE : CHAR16 is supposed to be Minimum of 16-Bit.
 //        But on some machines it will be 32-Bit.
 //        I included both typedefs as a means of reference.
+// UEFI 2.9 Specs PDF Page 20
 typedef unsigned short int  uint16_t;
 typedef unsigned short int  uint_least16_t;
 typedef uint_least16_t          CHAR16;
@@ -30,6 +31,7 @@ typedef EFI_STATUS (*EFI_TEXT_RESET)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *Thi
 typedef EFI_STATUS (*EFI_TEXT_STRING)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, CHAR16 *String);
 
 // The struct for the EFI Text Output protocols.
+// UEFI 2.9 Specs PDF Page 449
 typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
 {
     EFI_TEXT_RESET      Reset;
@@ -37,6 +39,7 @@ typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
 } EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
 // This is the main EFI header for all of the EFI.
+// UEFI 2.9 Specs PDF Page 93
 typedef struct EFI_TABLE_HEADER
 {
     UINT64    Signature;
@@ -48,6 +51,7 @@ typedef struct EFI_TABLE_HEADER
 
 // EFI has a system and runtime. This system table is the first struct
 // called from the main section.
+// UEFI 2.9 Specs PDF Page 94
 typedef struct EFI_SYSTEM_TABLE
 {
     EFI_TABLE_HEADER                hrd;
@@ -62,6 +66,7 @@ typedef struct EFI_SYSTEM_TABLE
 // This is like int main() in a typical C program.
 // In this case, we create an ImageHandle for the overall EFI interface,
 // as well as a System Table pointer to the EFI_SYSTEM_TABLE struct.
+// UEFI 2.9 Specs PDF Page 91
 EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable)
 {
     // This clears the screen and buffer.
