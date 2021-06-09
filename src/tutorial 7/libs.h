@@ -74,14 +74,16 @@ void SetGraphicsColor(UINT32 color)
 // This positions the pixel in the row and column ( X and Y )
 void SetPixel(UINT32 xPos, UINT32 yPos)
 {
-    gop->Blt(gop, &GraphicsColor, 0, 0, 0, xPos, yPos, 1, 1, 0);
+    // TODO : Add in a choice instead of defaulting to EfiBltVideoFill.
+    gop->Blt(gop, &GraphicsColor, EfiBltVideoFill, 0, 0, xPos, yPos, 1, 1, 0);
 }
 
 // This creates a filled box of pixels.
 // NOTE : Call SetGraphicsColor prior to using this function.
 void CreateFilledBox(UINT32 xPos, UINT32 yPos, UINT32 w, UINT32 h)
 {
-    gop->Blt(gop, &GraphicsColor, 0, 0, 0, xPos, yPos, w, h, 0);
+    // TODO : Add in a choice instead of defaulting to EfiBltVideoFill.
+    gop->Blt(gop, &GraphicsColor, EfiBltVideoFill, 0, 0, xPos, yPos, w, h, 0);
 }
 
 #endif // LIBS_H
