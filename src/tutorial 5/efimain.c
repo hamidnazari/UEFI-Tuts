@@ -8,6 +8,7 @@
 // This is like int main() in a typical C program.
 // In this case, we create an ImageHandle for the overall EFI interface,
 // as well as a System Table pointer to the EFI_SYSTEM_TABLE struct.
+// UEFI 2.9 Specs PDF Page 91
 EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *ST)
 {
     // We setup this global variable in the libs.h file.

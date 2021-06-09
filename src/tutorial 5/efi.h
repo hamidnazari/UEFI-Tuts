@@ -4,6 +4,7 @@
 #ifndef EFI_H
 #define EFI_H
 
+// UEFI 2.9 Specs PDF Page 457
 #define EFI_BLACK                               0x00
 #define EFI_BLUE                                0x01
 #define EFI_GREEN                               0x02
@@ -33,6 +34,7 @@
 // NOTE : CHAR16 is supposed to be Minimum of 16-Bit.
 //        But on some machines it will be 32-Bit.
 //        I included both typedefs as a means of reference.
+// UEFI 2.9 Specs PDF Page 20
 typedef unsigned short int  uint16_t;
 typedef unsigned short int  uint_least16_t;
 typedef uint_least16_t          CHAR16;
@@ -41,8 +43,9 @@ typedef unsigned short      UINT16;
 typedef unsigned int        UINT32;
 typedef unsigned long long  UINT64;
 
-// UINTN can be used for both 64-Bit and 32-Bit.
+// UINTN can be used for both 64-Bit ( 8 Bytes ) and 32-Bit ( 4 Bytes ).
 // We set this for 64-Bit since this tutorial series is 64-Bit only.
+// UEFI 2.9 Specs PDF Page 20
 typedef unsigned long long      UINTN;
 
 typedef unsigned char       BOOLEAN;
@@ -58,6 +61,7 @@ struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL;
 // We check for the scan code of the key with this struct
 // Notice the 16-Bit interface, instead of the normal 8-Bit.
 // This is because EFI uses UNICODE.
+// UEFI 2.9 Specs PDF Page 448
 typedef struct EFI_INPUT_KEY
 {
 	UINT16    ScanCode;
@@ -74,6 +78,7 @@ typedef EFI_STATUS (*EFI_INPUT_RESET)(struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL *Thi
 typedef EFI_STATUS (*EFI_INPUT_READ_KEY)(struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL *This, EFI_INPUT_KEY *Key);
 
 // The struct for the keyboard input.
+// UEFI 2.9 Specs PDF Page 446
 typedef struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL
 {
 	EFI_INPUT_RESET        Reset;
@@ -97,6 +102,7 @@ typedef EFI_STATUS (*EFI_TEXT_SET_MODE)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *
 typedef EFI_STATUS (*EFI_TEXT_SET_ATTRIBUTE)(struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL *This, UINTN Attribute);
 
 // The struct for the EFI Text Output protocols.
+// UEFI 2.9 Specs PDF Page 449
 typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
 {
     EFI_TEXT_RESET                         Reset;
@@ -108,6 +114,7 @@ typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL
 } EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
 // This is the main EFI header for all of the EFI.
+// UEFI 2.9 Specs PDF Page 93
 typedef struct EFI_TABLE_HEADER
 {
     UINT64    Signature;
@@ -120,6 +127,7 @@ typedef struct EFI_TABLE_HEADER
 // EFI has a system and runtime. This system table is the first struct
 // called from the main section. Think of it as the entry point
 // to all of the EFI functions.
+// UEFI 2.9 Specs PDF Page 94
 typedef struct EFI_SYSTEM_TABLE
 {
     EFI_TABLE_HEADER                hrd;
