@@ -64,8 +64,7 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
     
     // What we do now is test to see what this buffer is holding.
     // The code below converts the binary code in the buffer,
-    // into a readable ASCII numbers. Each set of numbers represents
-    // a code in ASCII. So as an exercise, see if you can figure out
+    // into HEX Code. So as an exercise, see if you can figure out
     // the message without looking at the text file.
     // I included clibs.h to house the C function known as itoa().
     UINT8* test = (UINT8*)OSBuffer_Handle;
