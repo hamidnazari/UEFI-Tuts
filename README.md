@@ -29,6 +29,7 @@ I supplied the qemu bat file to launch qemu and load the drive.hdd file.
     - [TUTORIAL  9] COLD REBOOT  
     - [TUTORIAL 10] UNICODE KeyStroke ( UnicodeChar )  
     - [TUTORIAL 11] LOAD / OPEN / CLOSE VOLUME + FILE SYSTEM + FILES  
+    - [TUTORIAL 12] LOADED FILE TO BUFFER + READING IT 
 
 More Tuts Coming soon...  
 
