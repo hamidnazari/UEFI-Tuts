@@ -2,6 +2,8 @@
 
 THIS IS WINDOWS BASED TUTS, BUT CODE SHOULD WORK IN LINUX AND MAC.  
 
+**DISCORD** : https://discord.gg/6gxEF3QCtB  
+
 NOTE : You WILL need to change the makefile to work with Linux / MAC gcc compilers. I do not have Linux or Mac, so I have no way to test it. The line in the makefile "-Wl,-dll -Wl,--subsystem,10" is a WINDOWS gcc compiler line. You do not need it for Linux / Mac GCC versions.  
 
 Original 2.9 Specs PDF  
