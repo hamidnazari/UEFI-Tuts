@@ -3,6 +3,7 @@
 THIS IS WINDOWS BASED TUTS, BUT CODE SHOULD WORK IN LINUX AND MAC.  
 
 **DISCORD** : https://discord.gg/6gxEF3QCtB  
+**YOUTUBE** : https://www.youtube.com/channel/UCouyC9D6WFBwc24sqdkS-jw  
 
 NOTE : You WILL need to change the makefile to work with Linux / MAC gcc compilers. I do not have Linux or Mac, so I have no way to test it. The line in the makefile "-Wl,-dll -Wl,--subsystem,10" is a WINDOWS gcc compiler line. You do not need it for Linux / Mac GCC versions.  
 
@@ -12,7 +13,7 @@ NOTE 2 : Thanks to FueledByOCHD for his contribution of making this readme file 
 [Original 2.9 Specs PDF](https://uefi.org/specifications )  
 
 
-[MinGWx64 ( GCC )](https://nuwen.net/mingw.html) 
+[MinGWx64 ( GCC )](https://nuwen.net/mingw.html) ( For windows, no cross-compiler needed )  
 
 **NOTE :** This works in Windows. Cross-compiler is not needed. But in Linux GCC should still work.  
 
