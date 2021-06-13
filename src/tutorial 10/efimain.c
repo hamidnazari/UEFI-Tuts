@@ -58,15 +58,17 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *ST)
     Print(L"We Delayed 18 milliseconds per dot");
 
     SetColor(EFI_GREEN);
-    SetTextPosition(2, 10);
-    Print(L"Hit q to quit");
+    SetTextPosition(2, 23);
+    Print(L"Hit q to quit | Hit r to reboot");
+
+    ResetKeyboard();
 
     SetColor(EFI_WHITE);
-    EFI_INPUT_KEY GetKey;
+
 	UINTN u = 0;
 	unsigned int x = 5;
 	BOOLEAN y = 1;
-	SystemTable->ConIn->Reset(SystemTable->ConIn, 1);
+
     while(1)
     {
 		Delay1();
@@ -92,11 +94,20 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *ST)
 				y = 0;
 			}
 		}
-        SystemTable->ConIn->ReadKeyStroke(SystemTable->ConIn, &GetKey);
-        if(GetKey.UnicodeChar == 'q')
-		{
-			break;
-        }
+                EFI_STATUS Status = CheckKey();
+                if(Status == EFI_SUCCESS)
+                {
+ 		    if(GetKey('q') == 1)
+		    {
+                        SHUTDOWN();
+		        break;
+		    }
+                    if(GetKey('r') == 1)
+                    {
+                        COLD_REBOOT();
+		        break;
+                    }
+                }
     }
 
     COLD_REBOOT();

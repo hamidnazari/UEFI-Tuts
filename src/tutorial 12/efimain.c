@@ -80,22 +80,25 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
         test++;
     }
 
+
     SetColor(EFI_GREEN);
-    SetTextPosition(2, 18);
-    Print(L"Hit q to quit");
+    SetTextPosition(2, 23);
+    Print(L"Hit q to quit | Hit r to reboot");
+
+    ResetKeyboard();
 
     SetColor(EFI_WHITE);
-    EFI_INPUT_KEY GetKey;
+
 	UINTN u = 0;
 	unsigned int x = 5;
 	BOOLEAN y = 1;
-	SystemTable->ConIn->Reset(SystemTable->ConIn, 1);
+
     while(1)
     {
-		Delay1();
 		u++;
 		if(u > 36000)   // This is 36 * 1000 ==> 36 milliseconds
 		{
+                        Delay1();
 			u = 0;
 			SetTextPosition(x, 20);
 			Print(L"   ...   ");
@@ -115,13 +118,23 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
 				y = 0;
 			}
 		}
-        SystemTable->ConIn->ReadKeyStroke(SystemTable->ConIn, &GetKey);
-        if(GetKey.UnicodeChar == 'q')
-		{
-			break;
-        }
+                EFI_STATUS Status = CheckKey();
+                if(Status == EFI_SUCCESS)
+                {
+ 		    if(GetKey('q') == 1)
+		    {
+                        SHUTDOWN();
+		        break;
+		    }
+                    if(GetKey('r') == 1)
+                    {
+                        COLD_REBOOT();
+		        break;
+                    }
+                }
     }
 
+    // We should not make it to this point.
     COLD_REBOOT();
 
     // We should not make it to this point.

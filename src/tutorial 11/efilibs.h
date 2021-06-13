@@ -64,6 +64,27 @@ void HitAnyKey()
     while((SystemTable->ConIn->ReadKeyStroke(SystemTable->ConIn, &Key)) == EFI_NOT_READY);
 }
 
+void ResetKeyboard()
+{
+    SystemTable->ConIn->Reset(SystemTable->ConIn, 1);
+}
+
+EFI_INPUT_KEY CheckKeystroke;
+BOOLEAN GetKey(CHAR16 key)
+{
+    if(CheckKeystroke.UnicodeChar == key)
+    {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+EFI_STATUS CheckKey()
+{
+    return SystemTable->ConIn->ReadKeyStroke(SystemTable->ConIn, &CheckKeystroke);
+}
+
 // This sets the color of the pixels ( Graphics Color )
 void SetGraphicsColor(UINT32 color)
 {
