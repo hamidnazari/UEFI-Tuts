@@ -109,7 +109,8 @@ void WARM_REBOOT()
 void SHUTDOWN()
 {
     // Shuts off the computer
-    // NOTE : This does not work in VirtualBox or QEMU.
+    // NOTE : This does not work in VirtualBox.
+    // WORKS in QEMU !!!
     SystemTable->RuntimeServices->ResetSystem(EfiResetShutdown, EFI_SUCCESS, 0, 0);
 }
 
