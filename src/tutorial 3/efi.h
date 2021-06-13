@@ -4,6 +4,8 @@
 #ifndef EFI_H
 #define EFI_H
 
+#define UNICODE
+
 // This is listed as pme pf the EFI defines.
 // UEFI 2.9 Specs PDF Page 2194 - 2196
 #define EFI_NOT_READY                           0x8000000000000006

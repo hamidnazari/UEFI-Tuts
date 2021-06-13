@@ -4,6 +4,8 @@
 #ifndef EFI_H
 #define EFI_H
 
+#define UNICODE
+
 // UEFI 2.9 Specs PDF Page 457
 #define EFI_BLACK                               0x00
 #define EFI_BLUE                                0x01

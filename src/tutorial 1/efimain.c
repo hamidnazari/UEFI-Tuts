@@ -1,6 +1,8 @@
 // UEFI From Scratch Tutorials - ThatOSDev ( 2021 )
 // https://github.com/ThatOSDev/UEFI-Tuts
 
+#define UNICODE
+
 // NOTE : CHAR16 is supposed to be Minimum of 16-Bit.
 //        But on some machines it will be 32-Bit.
 //        I included both typedefs as a means of reference.
