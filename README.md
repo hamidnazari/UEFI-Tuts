@@ -33,7 +33,7 @@ I supplied the qemu bat file to launch qemu and load the drive.hdd file.
     - [TUTORIAL  6 - CURSOR POSITIONS](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%206) 
     - [TUTORIAL  7 - GRAPHICS OUTPUT PROTOCOL](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%207)
     - [TUTORIAL  8 - EFI STALL ( A.K.A. Delay )](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%208)    
-    - [TUTORIAL  9 - COLD REBOOT](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%209)  
+    - [TUTORIAL  9 - COLD REBOOT / SHUTDOWN](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%209)  
     - [TUTORIAL 10 - UNICODE KeyStroke ( UnicodeChar )](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2010)
     - [TUTORIAL 11 - LOAD / OPEN / CLOSE VOLUME + FILE SYSTEM + FILES](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2011)  
     - [TUTORIAL 12 - LOADED FILE TO BUFFER + READING IT](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2012)
