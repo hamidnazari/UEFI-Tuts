@@ -71,10 +71,10 @@ EFI_STATUS efi_main(EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *ST)
 
     while(1)
     {
-		Delay1();
 		u++;
 		if(u > 36000)   // This is 36 * 1000 ==> 36 milliseconds
 		{
+                        Delay1();
 			u = 0;
 			SetTextPosition(x, 17);
 			Print(L"   ...   ");
