@@ -1,4 +1,4 @@
-OSFMount -d -m F:
+OSFMount -D -m F:
 
 pause
 

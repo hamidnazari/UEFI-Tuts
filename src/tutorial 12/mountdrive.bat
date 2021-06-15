@@ -4,7 +4,7 @@ move /y BOOTX64.EFI "F:\EFI\Boot\"
 
 copy /y mytextfile.txt "F:\"
 
-timeout 1
+timeout 3
 
 OSFMount -d -m F:
 
