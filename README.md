@@ -17,7 +17,8 @@ NOTE 2 : Thanks to FueledByOCHD for his contribution of making this readme file 
 
 **NOTE :** This works in Windows. Cross-compiler is not needed. But in Linux GCC should still work.  
 
-[OSFMount](https://www.osforensics.com/tools/mount-disk-images.html)
+[OSFMount](https://www.osforensics.com/tools/mount-disk-images.html)  
+**NOTE :** I have now included BAT files with the command line switches to use OSFMount without the GUI interface.  
  
 
 **NOTE :** The create image is there for your convenience. I include the EXE and source code to create your own drive.hdd file from scratch. It even has the code setup with a 40 Meg GPT/EFI partition. This way you can see how it works.  
