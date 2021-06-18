@@ -5,23 +5,16 @@ THIS IS WINDOWS BASED TUTS, BUT CODE SHOULD WORK IN LINUX AND MAC.
 **DISCORD** : https://discord.gg/6gxEF3QCtB  
 **YOUTUBE** : https://www.youtube.com/channel/UCouyC9D6WFBwc24sqdkS-jw  
 
-NOTE : You WILL need to change the makefile to work with Linux / MAC gcc compilers. I do not have Linux or Mac, so I have no way to test it. The line in the makefile "-Wl,-dll -Wl,--subsystem,10" is a WINDOWS gcc compiler line. You do not need it for Linux / Mac GCC versions.  
+NOTE : MAKEFILES have been updated to work with linux and osx. Just make sure you use the correct GCC version that will work with the switches in the makefile.  
 
-NOTE 2 : Thanks to FueledByOCHD for his contribution of making this readme file much better to read.  
+**Original 2.9 Specs PDF** : https://uefi.org/specifications  
 
+**MinGWx64 ( GCC )** : https://nuwen.net/mingw.html ( This is for windows, no cross-compiler needed. )  
 
-[Original 2.9 Specs PDF](https://uefi.org/specifications )  
+**OSFMount** : https://www.osforensics.com/tools/mount-disk-images.html  
+**NOTE** : I have now included BAT files with the command line switches to use OSFMount without the GUI interface.  
 
-
-[MinGWx64 ( GCC )](https://nuwen.net/mingw.html) ( For windows, no cross-compiler needed )  
-
-**NOTE :** This works in Windows. Cross-compiler is not needed. But in Linux GCC should still work.  
-
-[OSFMount](https://www.osforensics.com/tools/mount-disk-images.html)  
-**NOTE :** I have now included BAT files with the command line switches to use OSFMount without the GUI interface.  
- 
-
-**NOTE :** The create image is there for your convenience. I include the EXE and source code to create your own drive.hdd file from scratch. It even has the code setup with a 40 Meg GPT/EFI partition. This way you can see how it works.  
+**NOTE** : The create image is there for your convenience. I include the EXE and source code to create your own drive.hdd file from scratch. It even has the code setup with a 40 Meg GPT/EFI partition. This way you can see how it works.  
 
 I supplied the qemu bat file to launch qemu and load the drive.hdd file.
 
