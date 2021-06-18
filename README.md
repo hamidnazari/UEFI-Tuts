@@ -33,11 +33,11 @@ I supplied the qemu bat file to launch qemu and load the drive.hdd file.
     - [TUTORIAL 12 - LOADED FILE TO BUFFER + READING IT](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2012)
     - [TUTORIAL 13 - CUSTOM FONT](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2013)
 
-More Tuts Coming soon... 
+More Tuts Coming soon... ( **NOTE : The order is subject to change** )  
 
     * Print String ( With our new font )  
     * Change Resolution  
-    * Transfer to Kernel   
+    * Transfer to test Kernel   
     * Graphics BackBuffer  
     * Image Loading ( BMP, TGA )  
     * PCI  
