@@ -57,20 +57,37 @@ void TestASCII(UINT32 sizeme)
 	
 	CreateFilledBox(5, 5, (ScreenWidth - 15), (ScreenHeight - 15));
 	
-	SetGraphicsColor(WHITE);
+	SetGraphicsColor(GRAY);
 		
-	UINT32 tX = 10;
-	UINT32 tY = 10;
+	UINT32 tX = 8;
+	UINT32 tY = 12;
 	UINT32 fSize = sizeme;
+	UINT32 fSize2 = sizeme;
 	
 	for(UINT32 k = 0; k < 256; k++)
     {
 	    GetCharacter(k, tX, tY, fSize);
 		tX += fSize + fSize;
-		if(tX > (ScreenWidth - ((10 + sizeme) + sizeme)))
+		if(tX > (ScreenWidth - ((10 + fSize) + fSize)))
 		{
 			tX = 10;
 			tY += (fSize * 2) + (fSize * 2);
+		}
+	}
+	
+	SetGraphicsColor(WHITE);
+		
+	tX = 10;
+	tY = 10;
+	
+	for(UINT32 k = 0; k < 256; k++)
+    {
+	    GetCharacter(k, tX, tY, fSize2);
+		tX += fSize2 + fSize2;
+		if(tX > (ScreenWidth - ((10 + fSize2) + fSize2)))
+		{
+			tX = 10;
+			tY += (fSize2 * 2) + (fSize2 * 2);
 		}
 	}
 }
