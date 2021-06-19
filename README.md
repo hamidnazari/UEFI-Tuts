@@ -46,6 +46,7 @@ More Tuts Coming soon... ( **NOTE : The order of this list is subject to change*
     * Print String ( With our new font )  
     * Change Resolution  
     * Transfer to test Kernel  
+    * Memmap ( Memory Management - This might end up being two parts )
     * Graphics Output 2 
     * Graphics BackBuffer  
     * Image Loading ( BMP, TGA )  
