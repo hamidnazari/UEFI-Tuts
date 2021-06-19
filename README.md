@@ -48,8 +48,6 @@ More Tuts Coming soon... ( **NOTE : The order of this list is subject to change*
     * Transfer to test Kernel  
     * Memmap ( Memory Management - This might end up being two parts )
     * Graphics Output 2 
-    * Graphics BackBuffer  
-    * Image Loading ( BMP, TGA )  
     * PCI  
 
 ![Current Progress](progress.png)  
