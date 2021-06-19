@@ -1,15 +1,18 @@
 # Step by Step Tutorials on how to use the UEFI for OS Development from scratch
 
-THE TUTORIALS ON YOUTUBE ARE WINDOWS BASED, BUT CODE SHOULD WORK IN LINUX AND MAC.  
-BUILD INSTRCUTIONS :  
-[https://github.com/ThatOSDev/UEFI-Tuts/tree/master/BUILD.md](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/BUILD.md)  
-
-**DISCORD** : https://discord.gg/6gxEF3QCtB  
-**YOUTUBE** : https://www.youtube.com/channel/UCouyC9D6WFBwc24sqdkS-jw  
+# NOTES  
+THE TUTORIALS ON YOUTUBE ARE WINDOWS BASED, BUT CODE SHOULD WORK IN LINUX AND MAC. 
 
 **UEFI 2.9 Specs PDF** : https://uefi.org/specifications  
 
 **NOTE** : The create image is there for your convenience. I include the EXE and source code to create your own drive.hdd file from scratch. It even has the code setup with a 40 Meg GPT/EFI partition. This way you can see how it works.  
+
+# BUILD INSTRCUTIONS  
+[https://github.com/ThatOSDev/UEFI-Tuts/tree/master/BUILD.md](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/BUILD.md)  
+
+# SOCIAL MEDIA LINKS
+**DISCORD** : https://discord.gg/6gxEF3QCtB  
+**YOUTUBE** : https://www.youtube.com/channel/UCouyC9D6WFBwc24sqdkS-jw  
 
 # READ THIS !!!
 - **BEGINNER MISTAKES** : [https://wiki.osdev.org/Beginner_Mistakes](https://wiki.osdev.org/Beginner_Mistakes)  
