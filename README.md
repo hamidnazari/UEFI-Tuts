@@ -11,6 +11,9 @@ BUILD INSTRCUTIONS :
 
 **NOTE** : The create image is there for your convenience. I include the EXE and source code to create your own drive.hdd file from scratch. It even has the code setup with a 40 Meg GPT/EFI partition. This way you can see how it works.  
 
+# MAKE SURE YOU HAVE READ THIS !!!  
+**BEGINNER MISTAKES** : [https://wiki.osdev.org/Beginner_Mistakes](https://wiki.osdev.org/Beginner_Mistakes)  
+
 - **Tutorials**
     - [TUTORIAL	 1 - TEXT](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%201)  
     - [TUTORIAL  2 - COLOR](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%202)  
