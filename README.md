@@ -15,6 +15,13 @@
 **YOUTUBE** : https://www.youtube.com/channel/UCouyC9D6WFBwc24sqdkS-jw  
 
 # READ THIS !!!
+- THINGS YOU SHOULD KNOW BEFORE STARTING OS DEVELOPMENT  
+    - The C Language  
+    - Assembly Language  
+    - How to read Hex Code ( Example : 0x8664 )  
+    - How your Host Operating System works ( Such as windows or linux )  
+    - How your compiler works ( Such as GCC )  
+    - How to do research ( Don't be lazy )  
 - **BEGINNER MISTAKES** : [https://wiki.osdev.org/Beginner_Mistakes](https://wiki.osdev.org/Beginner_Mistakes)  
 
 
