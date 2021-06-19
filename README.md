@@ -20,19 +20,19 @@
 
 # TUTORIALS
 -  Working on this now.....  
-    - TEXT [YOUTUBE](https://www.youtube.com/watch?v=vo1Q2th7l3I)  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%201)  
-    - [TUTORIAL  2 - COLOR](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%202)  
-    - [TUTORIAL  3 - KEYBOARD](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%203)  
-    - [TUTORIAL  4 - ERROR CHECKING](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%204)  
-    - [TUTORIAL  5 - EFI LIBS FILE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%205) 
-    - [TUTORIAL  6 - CURSOR POSITIONS](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%206) 
-    - [TUTORIAL  7 - GRAPHICS OUTPUT PROTOCOL](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%207)
-    - [TUTORIAL  8 - EFI STALL ( A.K.A. Delay )](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%208)    
-    - [TUTORIAL  9 - COLD REBOOT / SHUTDOWN](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%209)  
-    - [TUTORIAL 10 - UNICODE KeyStroke ( UnicodeChar )](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2010)
-    - [TUTORIAL 11 - LOAD / OPEN / CLOSE VOLUME + FILE SYSTEM + FILES](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2011)  
-    - [TUTORIAL 12 - LOADED FILE TO BUFFER + READING IT](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2012)
-    - [TUTORIAL 13 - CUSTOM FONT](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2013)
+    - TEXT                                             --- [YOUTUBE  3](https://www.youtube.com/watch?v=vo1Q2th7l3I)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%201)  
+    - COLOR                                            --- [YOUTUBE  5](https://www.youtube.com/watch?v=MlJCHIgGj4g)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%202)  
+    - KEYBOARD                                         --- [YOUTUBE  6](https://www.youtube.com/watch?v=27xFmX0RK8s)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%203)  
+    - ERROR CHECKING                                   --- [YOUTUBE  7](https://www.youtube.com/watch?v=lLb_Chaf8zk)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%204)  
+    - EFILIBS                                          --- [YOUTUBE  8](https://www.youtube.com/watch?v=6YN18i6Ws18)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%205) 
+    - CURSOR POSITIONS                                 --- [YOUTUBE 10](https://www.youtube.com/watch?v=H-pzGdDZDKA)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%206) 
+    - GRAPHICS OUTPUT 1                                --- [YOUTUBE 11](https://www.youtube.com/watch?v=eypFh_k86BM)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%207)
+    - EFI STALL / DELAY                                --- [YOUTUBE 12](https://www.youtube.com/watch?v=hMTGmX4_mUY)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%208)    
+    - COLD REBOOT / SHUTDOWN                           --- [YOUTUBE 13](https://www.youtube.com/watch?v=JXxgnGzUFqQ)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%209)  
+    - UNICODE KeyStroke ( UnicodeChar )                --- [YOUTUBE 14](https://www.youtube.com/watch?v=a4NJCuvfaPc)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2010)
+    - LOAD / OPEN / CLOSE VOLUME + FILE SYSTEM + FILES --- [YOUTUBE 15](https://www.youtube.com/watch?v=Zgiyy0Ysh08)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2011)  
+    - LOADED FILE TO BUFFER + READING IT               --- [YOUTUBE 16](https://www.youtube.com/watch?v=rgDN0kTP-fY)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2012)
+    - CUSTOM FONT                                      --- YOUTUBE COMING SOON  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2013)
 
 More Tuts Coming soon... ( **NOTE : The order of this list is subject to change** )  
 
