@@ -19,8 +19,8 @@
 
 
 # TUTORIALS
--  
-    - [TUTORIAL	 1 - TEXT](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%201)  
+-  Working on this now.....  
+    - TEXT [YOUTUBE](https://www.youtube.com/watch?v=vo1Q2th7l3I)  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%201)  
     - [TUTORIAL  2 - COLOR](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%202)  
     - [TUTORIAL  3 - KEYBOARD](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%203)  
     - [TUTORIAL  4 - ERROR CHECKING](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%204)  
