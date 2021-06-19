@@ -1,6 +1,8 @@
 # Step by Step Tutorials on how to use the UEFI for OS Development from scratch
 
 THIS IS WINDOWS BASED TUTS, BUT CODE SHOULD WORK IN LINUX AND MAC.  
+BUILD INSTRCUTIONS :  
+[https://github.com/ThatOSDev/UEFI-Tuts/tree/master/BUILD.md](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/BUILD.md)  
 
 **DISCORD** : https://discord.gg/6gxEF3QCtB  
 **YOUTUBE** : https://www.youtube.com/channel/UCouyC9D6WFBwc24sqdkS-jw  
