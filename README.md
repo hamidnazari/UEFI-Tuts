@@ -5,7 +5,10 @@
 
 - **UEFI 2.9 Specs PDF** : https://uefi.org/specifications  
 
-- The IMAGECREATOR40.EXE is there for your convenience. I include the EXE and source code to create your own drive.hdd file from scratch. It even has the code setup with a 40 Meg GPT/EFI partition. This way you can see how it works.  
+- **WARNING** : The 40 meg file is still there, but for MAC users, the 256 meg file is in the ZIP inside of the HOLD folder. Windows users CAN use that size file too.  
+
+- **The IMAGECREATOR program has been removed.**  
+
 
 # BUILD INSTRCUTIONS  
 [https://github.com/ThatOSDev/UEFI-Tuts/tree/master/BUILD.md](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/BUILD.md)  
