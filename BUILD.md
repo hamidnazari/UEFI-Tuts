@@ -7,11 +7,15 @@ use that image as the booting drive.
 Additionally, we will need a way of moving our EFI builds into this image. This part of the document explains how this
 step can be performed on various operating systems.
 
-There's a ZIP called called `drive-gpt.zip` in `UEFI-Tuts/hold` directory that contains a 256MB disk image. Unzip it and
-use it for the remainder of the tutorial.
+There's a disk image called `drive.hdd` located in `UEFI-Tuts/drive` directory. We will be using this image for these
+tutorials.
 
-**Note:** There's also have a 40MB drive in `UEFI-Tuts/drive` directory that mounts nicely on Windows, however on
-other operating systems it may not behave so nicely.
+**Note:** There's also a 256MB disk image ZIP file in `UEFI-Tuts/hold` directory which you may choose to utilise in case
+any issues arise with the 40MB one.
+
+To speed up the process of mounting, copying builds, unmounting the disk image, create `.bat` or `.sh` scripts to
+perform the commands appropriate to your system. `mountdrive.bat` in the tutorials directories does exactly this on
+Windows.
 
 ### Windows - Method 1: GUI
 #### Mounting
@@ -45,41 +49,82 @@ This will copy the EFI binary in the tutorial directory onto the drive which now
 
 ### MacOS
 #### Mounting
-**Note:** There is no need to run `sudo` for any of the commands below.
-1. Unzip the `UEFI-Tuts/hold/drive-gpt.zip`, it contains a 256MB disk image called `drive.hdd`. (Do not use the 40MB
-   disk image.)
-1. _Attach_ the disk (but not mount),
+**Note:** There is no need to `sudo` for any of the commands below.
+1. _Attach_ (not mount) the disk image located at `UEFI-Tuts/drive/drive.hdd`.
    ```
-   $ hdiutil attach -imagekey diskimage-class=CRawDiskImage -nomount drive.hdd
+   $ hdiutil attach -imagekey diskimage-class=CRawDiskImage -nomount drive/drive.hdd
    /dev/disk2          	GUID_partition_scheme
-   /dev/disk2s1        	Microsoft Reserved
-   /dev/disk2s2        	Microsoft Basic Data
+   /dev/disk2s1        	Microsoft Basic Data
    ```
-1. The command before will show you the device name that's been given to the image. In this case, it's `/dev/disk2`, but
-   we are interested in its second partition, `/dev/disk2s2`.
-1. Create a directory that will be our mountpoint, e.g. `/tmp/mnt/`.
+1. The command before will show you the device name that's been given to the image. In this case, it's `/dev/disk2`. You
+   may get a different name. We are interested in the `Microsoft Basic Data` (or `EFI System`) partition, so in our
+   example it would be `/dev/disk2s1`.
+1. Create a directory that will be our mountpoint, e.g. `/tmp/uefi-tuts`.
    ```
-   mkdir /tmp/mnt
+   $ mkdir /tmp/uefi-tuts
    ```
-1. Mount the device on this directory
+1. Mount the device on this directory.
    ```
-   $ mount -t msdos /dev/disk2s2 /tmp/mnt
+   $ mount -t msdos /dev/disk2s1 /tmp/uefi-tuts
    ```
-1. Now you can interact with the contents on the image using the `/tmp/mnt` directory.
+1. Now you can interact with the contents on the image using the `/tmp/uefi-tuts` directory.
 
 #### Unmounting
 1. Make sure all operations on the disk is done and the disk is not busy.
-1. Unmount the disk
+1. Unmount the disk.
    ```
-   $ umount /tmp/mnt
+   $ umount /tmp/uefi-tuts
    ```
-1. Detach the disk
+1. Detach the disk.
    ```
    $ hdiutil detach /dev/disk2
    ```
 
-## Build Instructions
+### Linux
+#### Mounting
+There are many ways of going about this, but I'm opting to stick to the widely available tools that most Linux distros
+come with. Having said that, I've tested the steps below on Debian 10.10.
+1. Create a loop device from the disk image located at `UEFI-Tuts/drive/drive.hdd`.
+   ```
+   $ sudo losetup -fP --show drive/drive.hdd 
+   /dev/loop0
+   ```
+1. Inspect the loop device that was just created. Note that you may have gotten a different device name.
+   ```
+   $ sudo fdisk -l /dev/loop0
+   Disk /dev/loop0: 40 MiB, 41943040 bytes, 81920 sectors
+   Units: sectors of 1 * 512 = 512 bytes
+   Sector size (logical/physical): 512 bytes / 512 bytes
+   I/O size (minimum/optimal): 512 bytes / 512 bytes
+   Disklabel type: gpt
+   Disk identifier: 3F250645-B761-4631-8F45-D9930BF98FF5
 
+   Device       Start   End Sectors Size Type
+   /dev/loop0p1   128 77951   77824  38M Microsoft basic data
+   ```
+   We are interested in the `Microsoft Basic Data` (or `EFI System`) partition, in this case it's `/dev/loop0p1`.
+1. Create a directory to serve as a mountpoint.
+   ```
+   $ sudo mkdir /mnt/uefi-tuts
+   ```
+1. Mount the loop device on it.
+   ```
+   $ sudo mount -t vfat /dev/loop0p1 /mnt/uefi-tuts
+   ```
+1. Now you can interact with the contents on the image using the `/mnt/uefi-tuts` directory.
+
+#### Unmounting
+1. Make sure all operations on the disk is done and the disk is not busy.
+1. Unmount from the mountpoint.
+   ```
+   $ sudo umount /mnt/uefi-tuts
+   ```
+1. Detach the loop device.
+   ```
+   $ sudo losetup -d /dev/loop0
+   ```
+
+## Build Instructions
 ### Windows
 1. Install an emulator, QEMU, or VirtualBox, or both from the links below:
     - QEMU: https://www.qemu.org/
