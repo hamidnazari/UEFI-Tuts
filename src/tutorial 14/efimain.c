@@ -19,7 +19,7 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
     
     SetColor(EFI_GREEN);
     SetTextPosition(8, 4);
-    Print(L"Hit Any Key to load the kernel\r\n");
+    Print(L"Hit Any Key to read value from external file\r\n");
 
     HitAnyKey();
     
@@ -27,27 +27,27 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
 
     InitializeFILESYSTEM();
     
-    void* OSKernelBuffer;
+    void* ExternalFileBuffer;
 
-    EFI_FILE_PROTOCOL* efikernel = openFile(L"kernel.bin");
+    EFI_FILE_PROTOCOL* efimyfile = openFile(L"myfile.bin");
 
     UINT64 fsize = 0x00001000;
 
-    EFI_STATUS Status = SystemTable->BootServices->AllocatePool(EfiLoaderData, fsize, (void**)&OSKernelBuffer);
-    Print(L"AllocatePool OSKernelBuffer");
+    EFI_STATUS Status = SystemTable->BootServices->AllocatePool(EfiLoaderData, fsize, (void**)&ExternalFileBuffer);
+    Print(L"AllocatePool ExternalFileBuffer");
     Print(CheckStandardEFIError(Status));
 
-    efikernel->SetPosition(efikernel, 0);
+    efimyfile->SetPosition(efimyfile, 0);
     
-    efikernel->Read(efikernel, &fsize, OSKernelBuffer);
+    efimyfile->Read(efimyfile, &fsize, ExternalFileBuffer);
     SetColor(EFI_GREEN);
-    Print(L"\r\nRead OSKernelBuffer");
+    Print(L"\r\nRead ExternalFileBuffer");
     Print(CheckStandardEFIError(Status));
 
     SetColor(EFI_LIGHTCYAN);    
     Print(L"\r\nFile Signature\r\n");
     SetColor(EFI_LIGHTRED);    
-    UINT8* test = (UINT8*)OSKernelBuffer;
+    UINT8* test = (UINT8*)ExternalFileBuffer;
 
     for(int m = 0; m < 5; m++)
     {
@@ -61,19 +61,19 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
 
     Print(L"\r\n\r\n");
     
-    efikernel->SetPosition(efikernel, 262);
+    efimyfile->SetPosition(efimyfile, 262);
     
-    efikernel->Read(efikernel, &fsize, OSKernelBuffer);
+    efimyfile->Read(efimyfile, &fsize, ExternalFileBuffer);
     SetColor(EFI_GREEN);
-    Print(L"Read OSKernelBuffer");
+    Print(L"Read ExternalFileBuffer");
     Print(CheckStandardEFIError(Status));
     
-    closeFile(efikernel);
+    closeFile(efimyfile);
     
     SetColor(EFI_LIGHTCYAN);    
     Print(L"\r\nEntry Point\r\n");
     SetColor(EFI_YELLOW);
-    UINT8* test2 = (UINT8*)OSKernelBuffer;
+    UINT8* test2 = (UINT8*)ExternalFileBuffer;
     for(int m = 0; m < 4; m++)
     {
         int j = *test2;
@@ -85,7 +85,7 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
     }
 
     SetColor(EFI_LIGHTCYAN);
-    int (*KernelBinFile)() = ((__attribute__((ms_abi)) int (*)() ) (UINT8*)OSKernelBuffer);
+    int (*KernelBinFile)() = ((__attribute__((ms_abi)) int (*)() ) (UINT8*)ExternalFileBuffer);
     int g = KernelBinFile();
     
     UINT16 tmp[8];
