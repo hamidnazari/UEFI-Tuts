@@ -5,7 +5,7 @@
 
 - **UEFI 2.9 Specs PDF** : https://uefi.org/specifications  
 
-- **WARNING** : The 40 meg file is still there, but for MAC users, the 256 meg file is in the ZIP inside of the HOLD folder. Windows users CAN use that size file too.  
+- **NOTICE** : The 40 meg file is still there, and can now be used by MAC and Linux users. The 256 meg file is in the ZIP inside of the HOLD folder for those who want a larger drive.hdd file to play with. All Operating System users CAN use that size file too.  
 
 - **The IMAGECREATOR program has been removed.**  
 
