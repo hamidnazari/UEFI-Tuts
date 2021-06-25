@@ -43,12 +43,13 @@
     - LOAD / OPEN / CLOSE VOLUME + FILE SYSTEM + FILES &nbsp; --- [YOUTUBE 15](https://www.youtube.com/watch?v=Zgiyy0Ysh08)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2011)  
     - LOADED FILE TO BUFFER + READING IT &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --- [YOUTUBE 16](https://www.youtube.com/watch?v=rgDN0kTP-fY)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2012)
     - CUSTOM FONT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--- [YOUTUBE 17](https://www.youtube.com/watch?v=9YGmVDYyEVw)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2013)
+	- RETURN VALUE FROM KERNEL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;--- [YOUTUBE 18](COMING SOON...)  ---  [SOURCE CODE](https://github.com/ThatOSDev/UEFI-Tuts/tree/master/src/tutorial%2014)
 
 More Tuts Coming soon... ( **NOTE : The order of this list is subject to change** )  
 
     * Print String ( With our new font )  
     * Change Resolution  
-    * Transfer to test Kernel  
+    * Transfer to test Kernel and Exit Boot Services  
     * Memmap ( Memory Management - This might end up being two parts )
     * Graphics Output 2 
     * PCI  
@@ -58,3 +59,6 @@ More Tuts Coming soon... ( **NOTE : The order of this list is subject to change*
 ![Current Progress](progress2.png)  
 
 ![Current Progress](progress3.png)  
+
+![Current Progress](progress4.png)  
+
