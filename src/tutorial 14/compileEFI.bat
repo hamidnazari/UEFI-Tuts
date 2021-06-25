@@ -3,6 +3,6 @@ gcc -Wall -Werror -m64 -mabi=ms efimain.o -nostdlib -shared -Wl,-dll -Wl,--subsy
 
 del *.o
 
-gcc -m64 -Wl,--oformat=binary -c kernel\kernel.c -e main -o kernel.bin
+gcc -m64 -mabi=ms -Wl,--oformat=binary -c kernel\kernel.c -e main -o kernel.bin
 
 pause
